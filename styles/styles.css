@@ -46,9 +46,18 @@ a.button {
 .hero {
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   color: #ffffff;
   background-color: #82B3D3;
+}
+
+.hero-separator {
+  width: 100%;
+  min-height: 57px;
+  background-image: url("../images/bottom-of-the-hero.svg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .description {
@@ -174,7 +183,7 @@ a.description-button {
 .hotels-main-block {
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center;
   color: #ffffff;
   background-color: #82B3D3;
