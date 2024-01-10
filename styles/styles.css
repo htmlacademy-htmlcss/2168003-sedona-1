@@ -16,7 +16,23 @@
   font-display: swap;
 }
 
+/* Normalize */
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 body {
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   background-color: #ffffff;
   color: #000000;
@@ -24,7 +40,7 @@ body {
   line-height: 21px;
 }
 
-a.button {
+.btn {
   background-color: #756157;
   color: #ffffff;
   font-size: 16px;
@@ -32,6 +48,14 @@ a.button {
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.btn-blue {
+  background-color: #82B3D3;
+}
+
+.btn-green {
+  background-color: #7DB54F;
 }
 
 .navigation-link {
@@ -44,20 +68,12 @@ a.button {
 }
 
 .hero {
-  background-image: url("../images/index-background.jpg");
+  background-image: url("../images/bottom-of-the-hero.svg"), url("../images/index-background.jpg");
+  background-position: bottom, center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 57px, cover;
   color: #ffffff;
   background-color: #82B3D3;
-}
-
-.hero-separator {
-  width: 100%;
-  min-height: 57px;
-  background-image: url("../images/bottom-of-the-hero.svg");
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 
 .description {
@@ -96,7 +112,8 @@ a.button {
   background-color: #83B3D31F;
 }
 
-.advantages-list .advantages-item:nth-child(2) {
+.advantages-list .advantages-item:nth-child(2),
+.advantages-list .advantages-item:nth-child(3n+2) {
   background-color: #83B3D333;
 }
 
@@ -115,7 +132,8 @@ a.button {
   background-color: #83B3D31F;
 }
 
-.advantages-list-reverse .advantages-item:nth-child(2) {
+.advantages-list-reverse .advantages-item:nth-child(2),
+.advantages-list-reverse .advantages-item:nth-child(3n+2) {
   background-color: #ffffff;
 }
 
@@ -126,7 +144,7 @@ a.button {
   text-align: center;
 }
 
-a.description-button {
+.description-button {
   font-size: 20px;
   line-height: 36px;
 }
@@ -136,7 +154,7 @@ a.description-button {
 }
 
 .with-background-image {
-  background-image: url("../images/index-background.jpg");
+  background-image: url("../images/banner-blurred.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   color: #ffffff;
@@ -181,7 +199,7 @@ a.description-button {
 /* Hotels Page */
 
 .hotels-main-block {
-  background-image: url("../images/index-background.jpg");
+  background-image: url("../images/hotels-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -246,26 +264,6 @@ a.description-button {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-}
-
-.results-button {
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.results-item-more-info {
-  background-color: #756157;
-}
-
-.results-item-favorite {
-  background-color: #82B3D3;
-}
-
-.results-item-favorite.favorite-active {
-  background-color: #7DB54F;
 }
 
 .results-item-rating {
