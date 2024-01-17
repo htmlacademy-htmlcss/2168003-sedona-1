@@ -34,6 +34,7 @@ html {
   height: 100%;
 }
 
+/* General styles */
 
 body {
   margin: 0;
@@ -57,12 +58,6 @@ body {
   text-decoration: none;
 }
 
-.button-header {
-  width: 160px;
-  display: block;
-  text-align: center;
-}
-
 .btn-blue {
   background-color: #82B3D3;
 }
@@ -71,9 +66,16 @@ body {
   background-color: #7DB54F;
 }
 
+/* Header */
+
+.button-header {
+  width: 160px;
+  display: block;
+  text-align: center;
+}
+
 .page-header {
   display: flex;
-  width: 1200px;
   background-color: #ffffff;
   margin: 0 auto;
   padding: 0 70px;
@@ -113,10 +115,13 @@ body {
   line-height: 24px;
 }
 
-.main-container {
-  flex-grow: 1;
+.content-wrapper {
   width: 1200px;
   margin: 0 auto;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .hero {
@@ -126,6 +131,8 @@ body {
   background-size: 100% 57px, cover;
   color: #ffffff;
   background-color: #82B3D3;
+  padding-top: 52px;
+  padding-bottom: 83px;
 }
 
 .hero-logo {
@@ -139,6 +146,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 69px 0;
 }
 
 .description-title {
@@ -147,11 +155,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  width: 620px;
-}
-
-.description-title-narrower {
-  width: 505px;
+  margin-bottom: 25px;
 }
 
 .description-subtitle {
@@ -160,8 +164,8 @@ body {
   margin: 0;
 }
 
-.description-subtitle-wider {
-  width: 592px;
+.description-with-button {
+  padding: 96px;
 }
 
 .advantage-solo {
@@ -172,10 +176,10 @@ body {
 }
 
 .advantage-text-wrapper {
-  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 102px 85px;
 }
 
 .advantage-solo-title {
@@ -183,11 +187,10 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   margin: 0;
-  width: 175px;
+  margin-bottom: 62px;
 }
 
 .advantage-solo-subtitle {
-  width: 230px;
   margin: 0;
 }
 
@@ -214,6 +217,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 113px 85px;
 }
 
 .advantage-title {
@@ -222,11 +226,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  width: 175px;
-}
-
-.advantage-subtitle {
-  width: 230px;
+  margin-bottom: 62px;
 }
 
 .advantages-with-icon-wrapper {
@@ -252,6 +252,18 @@ body {
   flex-direction: row-reverse;
 }
 
+.description-second {
+  padding: 64px;
+}
+
+.description-second .description-title {
+  margin-bottom: 20px;
+}
+
+.description-with-button .description-subtitle {
+  margin-bottom: 54px;
+}
+
 .description-button {
   font-size: 20px;
   line-height: 36px;
@@ -261,6 +273,7 @@ body {
 .description-cta {
   background-color: #ffffff;
   text-align: center;
+  padding: 96px 258px 104px;
 }
 
 .with-background-image {
@@ -271,20 +284,25 @@ body {
   background-color: #82B3D3;
 }
 
+.description-cta-text-wrapper {
+  padding: 0 104px;
+}
+
 .description-cta-title {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .description-cta-subtitle {
   font-size: 22px;
   line-height: 26px;
-  width: 475px;
   display: block;
   margin: 0 auto;
+  margin-bottom: 54px;
 }
 
 .subscribe-mail {
@@ -294,6 +312,10 @@ body {
   line-height: 24px;
   width: 452px;
   margin-right: 0;
+}
+
+.subscribe-form {
+  display: flex;
 }
 
 .subscribe-form button {
@@ -316,9 +338,9 @@ body {
 
 .page-footer {
   background-color: #ffffff;
-  width: 1200px;
   margin: 0 auto;
   display: flex;
+  padding: 45px 70px;
 }
 
 .social-links {
@@ -357,6 +379,8 @@ body {
   background-position: center;
   color: #ffffff;
   background-color: #82B3D3;
+  padding: 70px;
+  padding-top: 35px;
 }
 
 .page-title {
@@ -367,7 +391,6 @@ body {
 }
 
 .filters-wrapper {
-  width: 1060px;
   margin: 0 auto;
 }
 
@@ -441,6 +464,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-top: 56px;
 }
 
 .filters-controls-accept {
@@ -454,6 +478,7 @@ body {
 
 .results-info {
   background-color: #ffffff;
+  padding: 50px 70px 60px;
 }
 
 .hotels-search-result {
@@ -466,8 +491,8 @@ body {
 }
 
 .results-header-wrapper {
-  width: 1060px;
   margin: 0 auto;
+  margin-bottom: 40px;
   display: flex;
 }
 
@@ -492,8 +517,8 @@ body {
 }
 
 .results-list-wrapper {
-  width: 1060px;
   margin: 0 auto;
+  margin-bottom: 80px;
 }
 
 .results-list {
@@ -535,6 +560,7 @@ body {
 .results-item-controls {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 .results-item-rating-wrapper {
@@ -562,9 +588,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  width: 1060px;
   margin-right: auto;
-  margin-left: 70px;
   gap: 8px;
 }
 
