@@ -34,6 +34,20 @@ html {
   height: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* General styles */
 
 body {
@@ -68,12 +82,6 @@ body {
 
 /* Header */
 
-.button-header {
-  width: 160px;
-  display: block;
-  text-align: center;
-}
-
 .page-header {
   display: flex;
   background-color: #ffffff;
@@ -85,18 +93,19 @@ body {
   margin-right: 46px;
 }
 
+/* Navigation */
+
+.navigation {
+  padding: 0;
+  margin: 0;
+}
+
 .navigation-list {
   list-style: none;
   padding: 0;
 }
 
 .navigation-links {
-  display: flex;
-  gap: 32px;
-}
-
-.navigation-actions {
-  margin-left: auto;
   display: flex;
 }
 
@@ -113,7 +122,27 @@ body {
   text-transform: capitalize;
   font-size: 20px;
   line-height: 24px;
+  display: block;
+  margin: 0;
+  padding: 20px 16px;
 }
+
+/* Search header */
+
+.navigation-actions {
+  margin-left: auto;
+  display: flex;
+}
+
+.button-header {
+  width: 160px;
+  display: block;
+  text-align: center;
+  min-height: 36px;
+  padding: 8px;
+}
+
+/* Content Part */
 
 .content-wrapper {
   width: 1200px;
