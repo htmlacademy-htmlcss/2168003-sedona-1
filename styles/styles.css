@@ -107,6 +107,7 @@ body {
 
 .navigation-links {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .navigations-actions-icons {
@@ -153,6 +154,8 @@ body {
   flex-grow: 1;
 }
 
+/* Hero block */
+
 .hero {
   background-image: url("../images/bottom-of-the-hero.svg"), url("../images/index-background.jpg");
   background-position: bottom, center;
@@ -197,6 +200,8 @@ body {
   padding: 96px;
 }
 
+/* Block with advantage and image */
+
 .advantage-solo {
   background-color: #82B3D3;
   color: #ffffff;
@@ -223,12 +228,16 @@ body {
   margin: 0;
 }
 
+/* Block with advantages */
+
 .advantages-list {
   text-align: center;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  min-height: 385px;
 }
 
 .advantages-list .advantages-item {
@@ -258,6 +267,10 @@ body {
   margin-bottom: 62px;
 }
 
+.advantage-subtitle {
+  margin: 0;
+}
+
 .advantages-with-icon-wrapper {
   width: 230px;
   margin: 0 auto;
@@ -279,6 +292,10 @@ body {
 
 .advantage-solo-reverse {
   flex-direction: row-reverse;
+}
+
+.with-icons .advantage-title {
+  margin-bottom: 30px;
 }
 
 .description-second {
@@ -377,13 +394,16 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 26px;
+  flex-wrap: wrap;
   margin-right: 237px
 }
 
 .social-links-item {
   display: block;
   width: 22px;
+  border: 1px solid red;
+  min-width: 47px;
+  min-height: 40px;
 }
 
 .footer-socials {
@@ -418,6 +438,8 @@ body {
   line-height: 78px;
   margin: 0
 }
+
+/* Header */
 
 .filters-wrapper {
   margin: 0 auto;
@@ -505,6 +527,8 @@ body {
   background-color: transparent;
 }
 
+/* Results block */
+
 .results-info {
   background-color: #ffffff;
   padding: 50px 70px 60px;
@@ -539,8 +563,8 @@ body {
 }
 
 .select-grid-type-button {
-  width: 48px;
-  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   display: block;
   text-wrap: nowrap;
 }
@@ -558,6 +582,8 @@ body {
   flex-wrap: wrap;
   gap: 20px
 }
+
+/* Result card */
 
 .results-item {
   width: 340px;
@@ -611,6 +637,8 @@ body {
   width: 140px;
 }
 
+/* Pagination */
+
 .pagination {
   margin: 0;
   padding: 0;
@@ -621,32 +649,29 @@ body {
   gap: 8px;
 }
 
-.pagination-item {
-  background-color: #82B3D3;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .pagination-link {
   color: #ffffff;
   text-decoration: none;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
+  background-color: #82B3D3;
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
 }
 
-.pagination-item.pagination-active, .pagination-special {
+.pagination-active {
   background-color: #F2F2F2;
-}
-
-.pagination-item.pagination-active .pagination-link {
   color: #000000;
 }
 
 .pagination-more {
   font-size: 22px;
   line-height: 26px;
+  background-color: #ffffff;
+  color: #000000;
 }
