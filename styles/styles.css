@@ -616,6 +616,10 @@ body {
   grid-column: 1 / -1;
 }
 
+.results-item-link img {
+  object-fit: contain;
+}
+
 .results-item-title {
   color: #000000;
   font-size: 24px;
