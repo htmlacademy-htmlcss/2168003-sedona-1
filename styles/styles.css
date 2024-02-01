@@ -87,11 +87,10 @@ body {
   background-color: #ffffff;
   margin: 0 auto;
   padding: 0 70px;
-  height: 64px;
 }
 
-.logo-header {
-  margin-right: 46px;
+.page-header-logo {
+  position: absolute;
 }
 
 /* Navigation */
@@ -99,6 +98,7 @@ body {
 .navigation {
   padding: 0;
   margin: 0;
+  margin-left: 168px;
 }
 
 .navigation-list {
@@ -605,10 +605,15 @@ body {
 .results-item {
   width: 340px;
   padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+  grid-template-rows: 212px auto min-content min-content min-content;
 }
 
 .results-item-link {
   text-decoration: none;
+  grid-column: 1 / -1;
 }
 
 .results-item-title {
@@ -618,31 +623,28 @@ body {
   line-height: 28px;
 }
 
-.results-item-description {
-  display: flex;
-  justify-content: space-between;
+.results-item-description-price {
+  justify-self: self-end;
 }
 
 .results-item .btn {
   width: 140px;
-  display: block;
   text-align: center;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .results-item-controls {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 24px;
-}
-
-.results-item-rating-wrapper {
-  display: flex;
-  justify-content: space-between;
 }
 
 .results-item-rating-stars {
   display: block;
   width: 140px;
+  align-self: center;
 }
 
 .results-item-rating {
@@ -652,6 +654,13 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   width: 140px;
+  align-self: center;
+  text-align: center;
+}
+
+.results-item .btn, .results-item-rating {
+  padding: 8px 18px;
+  border-radius: 4px;
 }
 
 /* Pagination */
