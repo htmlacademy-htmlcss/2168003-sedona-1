@@ -401,7 +401,6 @@ body {
 .social-links-item {
   display: block;
   width: 22px;
-  border: 1px solid red;
   min-width: 47px;
   min-height: 40px;
 }
@@ -457,21 +456,24 @@ body {
   font-size: 16px;
 }
 
-.hotels-filters-form {
-  display: flex;
+.filters-header {
+  margin-bottom: 40px;
 }
 
-.first-filters-group, .second-filters-group {
-  width: 151px;
+.hotels-filters-form {
+  display: flex;
+  gap: 70px;
+}
+
+.hotels-filters-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .hotels-filters-group {
   margin: 0;
   padding: 0;
-}
-
-.first-filters-group {
-  margin-right: 70px;
 }
 
 .hotels-filters-price-group {
@@ -485,6 +487,14 @@ body {
 .third-filters-group {
   margin-right: 70px;
   width: 288px;
+}
+
+.hotels-filters-item {
+  margin-bottom: 16px;
+}
+
+.hotels-filters-item:first-child {
+  margin-top: 32px;
 }
 
 
@@ -578,9 +588,9 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
 }
 
 /* Result card */
