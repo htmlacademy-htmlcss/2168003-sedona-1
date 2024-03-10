@@ -105,7 +105,7 @@
 
         <section class="advantage-solo advantage-solo-reverse">
           <div class="advantage-text-wrapper">
-            <h3 class="advantage-solo-title">Там есть<br/>мост дьявола</h3>
+            <h3 class="advantage-solo-title">Там есть<br />мост дьявола</h3>
             <p class="advantage-solo-subtitle">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </div>
           <img class="advantage-solo-image" src="images/attraction-2.jpg" width="800" height="385"
@@ -157,7 +157,7 @@
           </div>
           <form action="https://echo.htmlacademy.ru/" method="post" class="subscribe-form">
             <label for="email" class="visually-hidden">Ваш e-mail</label>
-            <input type="email" placeholder="Ваш e-mail" class="subscribe-mail" name="email" id="email">
+            <input type="email" placeholder="Ваш e-mail" class="subscribe-mail" name="email" id="email" required>
             <button type="submit" class="btn btn-blue">Подписаться</button>
           </form>
         </section>
@@ -243,65 +243,75 @@
       </footer>
     </div>
 
-    <div class="modal-wrapper modal-active">
+    <div class="modal-wrapper">
       <div class="modal">
         <div class="modal-header">
           <h2 class="modal-title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2>
-          <button class="modal-close-button"><span class="visually-hidden">Закрыть окно поиска гостиницы</span></button>
+          <button class="modal-close-button" type="button"><span class="visually-hidden">Закрыть окно поиска
+              гостиницы</span></button>
         </div>
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
-          <label class="choose-date" name="date-start">
-            <span class="modal-label choose-date-label">Дата Заезда:</span>
-            <input class="date-picker" type="date" />
-            <span class="choose-date-message message-error">Мы не можем отправить вас в прошлое.</span>
-          </label>
-          <label class="choose-date" name="date-end">
-            <span class="modal-label choose-date-label">Дата Выезда:</span>
-            <input class="date-picker" type="date" />
-            <span class="choose-date-message">На эти даты есть свободные номера. Пока есть.</span>
-          </label>
-          <label class="choose-amount-adult" name="date-end">
-            <span class="modal-label choose-date-label">Взрослые:</span>
-            <div class="people-number-picker">
-              <input class="number-of-people" type="number" />
-              <button class="number-action decrease-number" type="button">
-                <span class="visually-hidden">Уменьшить число взрослых</span>
-                <svg class="minus-icon" width="14" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 0L0 2L14 2V0L0 0Z" />
-                </svg>
-              </button>
-              <button class="number-action increase-number" type="button">
-                <span class="visually-hidden">Увеличить число взрослых</span>
-                <svg class="plus-icon" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
-                </svg>
-              </button>
+          <label class="choose-date">
+            <div class="label-and-picker-wrapper">
+              <span class="modal-label choose-date-label">Дата Заезда:</span>
+              <div class="modal-input-wrapper">
+                <input class="date-picker" type="text" value="27 апреля 2020" name="date-start" required/>
+                <span class="choose-date-message message-error">Мы не можем отправить вас в прошлое.</span>
+              </div>
             </div>
           </label>
-          <label class="choose-amount-child" name="date-end">
-            <span class="modal-label choose-date-label">Дети:</span>
-            <span class="tooltip">
-              <button class="info-icon" type="button" aria-labelledby="tooltip-label-date"></button>
-              <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут
-                с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-            </span>
-            <div class="people-number-picker">
-              <input class="number-of-people" type="number" />
-              <button class="number-action decrease-number" type="button">
-                <span class="visually-hidden">Уменьшить число детей</span>
-                <svg class="minus-icon" width="14" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 0L0 2L14 2V0L0 0Z" />
-                </svg>
-              </button>
-              <button class="number-action increase-number" type="button">
-                <span class="visually-hidden">Увеличить число детей</span>
-                <svg class="plus-icon" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
-                </svg>
-              </button>
+          <label class="choose-date">
+            <div class="label-and-picker-wrapper">
+              <span class="modal-label choose-date-label">Дата Выезда:</span>
+              <div class="modal-input-wrapper">
+                <input class="date-picker" type="text" value="1 сентября 2023" name="date-end" required/>
+                <span class="choose-date-message">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
             </div>
           </label>
-
+          <div class="people-pickers-wrapper">
+            <label class="choose-amount-adult">
+              <span class="modal-label adult-label">Взрослые:</span>
+              <div class="people-number-picker">
+                <input class="number-of-people" type="number" value="2" name="amount-of-adults"/>
+                <button class="number-action decrease-number" type="button">
+                  <span class="visually-hidden">Уменьшить число взрослых</span>
+                  <svg class="minus-icon" width="14" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 2L14 2V0L0 0Z" />
+                  </svg>
+                </button>
+                <button class="number-action increase-number" type="button">
+                  <span class="visually-hidden">Увеличить число взрослых</span>
+                  <svg class="plus-icon" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                  </svg>
+                </button>
+              </div>
+            </label>
+            <label class="choose-amount-child" name="date-end">
+              <span class="modal-label children-label">Дети:</span>
+              <span class="tooltip">
+                <button class="info-icon" type="button" aria-labelledby="tooltip-label-date"></button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут
+                  с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+              <div class="people-number-picker">
+                <input class="number-of-people" type="number" value="2" name="amount-of-children"/>
+                <button class="number-action decrease-number" type="button">
+                  <span class="visually-hidden">Уменьшить число детей</span>
+                  <svg class="minus-icon" width="14" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 2L14 2V0L0 0Z" />
+                  </svg>
+                </button>
+                <button class="number-action increase-number" type="button">
+                  <span class="visually-hidden">Увеличить число детей</span>
+                  <svg class="plus-icon" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                  </svg>
+                </button>
+              </div>
+            </label>
+          </div>
           <button class="modal-submit btn btn-blue" type="submit">Найти</button>
         </form>
       </div>
