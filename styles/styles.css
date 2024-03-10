@@ -992,6 +992,7 @@ body {
   background-color: #ffffff;
   position: absolute;
   top: -8px;
+  cursor: pointer;
 }
 
 .button-slider-from {
@@ -1170,6 +1171,7 @@ body {
   appearance: none;
   transition: all 0.125s;
   position: relative;
+  cursor: pointer;
 }
 
 .selector-arrow {
