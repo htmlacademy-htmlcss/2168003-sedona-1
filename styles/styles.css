@@ -850,10 +850,18 @@ body {
 }
 
 .hotels-filters-input-checkbox:hover + .custom-checkbox,
-.hotels-filters-input-checkbox:active + .custom-checkbox,
-.hotels-filters-input-radio:hover + .custom-radio,
-.hotels-filters-input-radio:active + .custom-radio {
+.hotels-filters-input-radio:hover + .custom-radio {
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+.hotels-filters-input-checkbox:active + .custom-checkbox,
+.hotels-filters-input-radio:active + .custom-radio {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hotels-filters-input-checkbox:active ~ .input-label,
+.hotels-filters-input-radio:active ~ .input-label {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hotels-filters-input-radio:focus + .custom-radio,
