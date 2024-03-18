@@ -1452,7 +1452,7 @@ body {
 
 .modal {
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
-  min-width: 717px;
+  width: 717px;
   min-height: 200px;
   background-color: #ffffff;
   top: 50%;
