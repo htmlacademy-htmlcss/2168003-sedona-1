@@ -266,6 +266,8 @@ body {
 .navigation-icon {
   fill: #000000;
   transition: all 0.25s;
+  position: relative;
+  top: 2px;
 }
 
 .navigation-link:hover .navigation-icon {
@@ -277,43 +279,26 @@ body {
 }
 
 .like-counter {
+  display: inline-block;
   position: absolute;
-  right: 8px;
-  top: 16px;
+  right: 4px;
+  top: 11px;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #7db54f;
+  transition: all 0.25s;
+  padding: 5px 4px;
+}
+
+.like-number {
   font-size: 10px;
   line-height: 10px;
+  font-weight: 400;
   color: #ffffff;
-}
-
-.like-counter span {
   position: relative;
-  z-index: 2;
-  transition: all 0.25s;
-  color: #ffffff;
+  top: -100%;
 }
-
-.navigation-link:hover .like-counter span {
-  transform: scale(0);
-  display: inline-block;
-}
-
-.like-counter::after {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #7db54f;
-  content: "";
-  position: absolute;
-  right: -4px;
-  top: -5px;
-  z-index: 1;
-  transition: all 0.25s;
-}
-
-.navigation-item:hover .like-counter::after {
-  transform: scale(0);
-}
-
 
 /* Search header */
 
@@ -349,8 +334,8 @@ body {
   background-size: 100% 57px, cover;
   color: #ffffff;
   background-color: #313b42;
-  padding-top: 52px;
-  padding-bottom: 83px;
+  padding-top: 51px;
+  padding-bottom: 81px;
 }
 
 .hero-logo {
@@ -383,7 +368,7 @@ body {
 }
 
 .description-with-button {
-  padding: 96px;
+  padding: 98px 300px 96px;
 }
 
 /* Block with advantage and image */
@@ -461,7 +446,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 62px;
+  margin-bottom: 61px;
   position: relative;
   width: 100%;
 }
@@ -508,6 +493,7 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .with-icons .advantage-title {
@@ -534,23 +520,23 @@ body {
   background: url("../images/icons/advantages/food.svg");
   width: 74px;
   height: 70px;
-  top: -102px;
+  top: -101px;
 }
 
 .icon-souvenirs::after {
   background: url("../images/icons/advantages/souvenirs.svg");
   width: 64px;
   height: 76px;
-  top: -102px;
+  top: -104px;
 }
 
 .with-icons .advantages-item {
-  padding-top: 183px;
+  padding-top: 185px;
   padding-bottom: 20px;
 }
 
 .description-second {
-  padding: 64px;
+  padding: 63px;
 }
 
 .description-second .description-title {
@@ -579,6 +565,8 @@ body {
   padding: 96px 258px 104px;
 }
 
+
+
 .with-background-image {
   background-image: url("../images/banner-blurred.jpg");
   background-repeat: no-repeat;
@@ -597,7 +585,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .description-cta-subtitle {
@@ -682,7 +670,7 @@ body {
   background-color: #ffffff;
   margin: 0 auto;
   display: flex;
-  padding: 45px 70px;
+  padding: 44px 70px;
   align-items: center;
 }
 
@@ -831,30 +819,21 @@ body {
   position: relative;
 }
 
-
-.breadcrumbs li:first-of-type .breadcrumbs-link:hover .breadcrumbs-icon {
-  fill: rgba(255, 255, 255, 0.6);
-}
-
-.breadcrumbs li:first-of-type .breadcrumbs-link:focus .breadcrumbs-icon {
-  fill: #ffffff;
-}
-
-.breadcrumbs li:first-of-type .breadcrumbs-link:active .breadcrumbs-icon {
-  fill: rgba(255, 255, 255, 0.3);
-}
-
-.breadcrumbs li:not(:last-of-type) .breadcrumbs-link:hover {
-  color: rgba(255, 255, 255, 0.6);
-  cursor: pointer;
-}
-
-.breadcrumbs li:not(:last-of-type) .breadcrumbs-link:focus {
+.breadcrumbs-link {
   color: #ffffff;
+  text-decoration: none;
 }
 
-.breadcrumbs li:not(:last-of-type) .breadcrumbs-link:active {
-  color: rgba(255, 255, 255, 0.3);
+.breadcrumbs-link[href]:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link[href]:focus {
+  opacity: 1;
+}
+
+.breadcrumbs-link[href]:active {
+  opacity: 0.3;
 }
 
 .breadcrumbs li:not(:first-of-type)::before {
@@ -970,8 +949,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
   background-color: #3f5e72;
   border-radius: 50%;
   content: "";
@@ -1179,7 +1158,7 @@ body {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
-  margin-top: 4px;
+  margin-top: 6px;
   max-width: 450px;
   overflow: hidden;
 }
@@ -1205,7 +1184,7 @@ body {
 .sort-by-filter {
   width: 292px;
   height: 49px;
-  padding-left: 20px;
+  padding-left: 18px;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -1303,7 +1282,7 @@ body {
 
 .results-list-wrapper {
   margin: 0 auto;
-  margin-bottom: 75px;
+  margin-bottom: 79px;
 }
 
 .results-list {
@@ -1362,20 +1341,34 @@ body {
   margin-bottom: 24px;
 }
 
-.results-item-rating-stars {
+/* .results-item-rating-stars {
   display: block;
   width: 140px;
   height: 37px;
   align-self: center;
   position: relative;
+} */
+
+.results-item-rating-stars {
+  background: url("../images/icons/stars.svg");
 }
 
-.single-star {
-  fill: #83b3d3;
-  top: 50%;
-  position: relative;
-  transform: translateY(-50%);
+.rating-4 {
+  width: 90px;
 }
+
+.rating-3 {
+  width: 70px;
+}
+
+.rating-2 {
+  width: 50px;
+}
+
+.rating-1 {
+  width: 20px;
+}
+
 
 .results-item-rating {
   background-color: #f2f2f2;
@@ -1421,6 +1414,7 @@ body {
   align-items: center;
   border-radius: 4px;
   transition: all 0.25s;
+  padding: 11px;
 }
 
 .pagination-link:not(.pagination-active):not(.pagination-more):hover {
@@ -1703,7 +1697,8 @@ body {
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
-  padding: 14px 50px;
+  padding: 14px 35px;
+  text-align: center;
 }
 
 .people-number-picker:hover .number-of-people,
